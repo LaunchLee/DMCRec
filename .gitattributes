@@ -1,0 +1,2 @@
+# Use identical text bytes across Windows, WSL and GitHub checkouts.
+* text=auto eol=lf

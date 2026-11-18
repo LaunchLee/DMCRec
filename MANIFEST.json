@@ -1,4 +1,8 @@
 {
+  ".gitattributes": {
+    "bytes": 88,
+    "sha256": "10f01b845b285653141d878f59d9239bf94b5b485cdf84b8bec8a6b80aca5f85"
+  },
   ".gitignore": {
     "bytes": 399,
     "sha256": "cc3f9c1b0da9a267089171257b48c59930ae13318dc92cc328f209738978acb0"
@@ -120,8 +124,8 @@
     "sha256": "e7c5e3907decbdb703b75fe5175b339f0ec476d3727b660931b35c2fe0bb8086"
   },
   "research_results/per_seed_metrics.csv": {
-    "bytes": 387702,
-    "sha256": "c2903aa8441a123ee93552a827047b9911d9e834ea2085efad9737cd391b1e4f"
+    "bytes": 383351,
+    "sha256": "6b5ab3f25ed6f2b8cb6c0bd9278f1ef5cecc739c335a4809dff8638307b724f2"
   },
   "research_results/runs.json": {
     "bytes": 219052,
