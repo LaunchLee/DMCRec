@@ -1,0 +1,882 @@
+{
+  "Baby/baby_primary/DMCRec/full": {
+    "dataset": "Baby",
+    "model": "DMCRec",
+    "variant": "full",
+    "params": {
+      "name": "DMCRec_full",
+      "k": 128,
+      "k2": 64,
+      "n_epochs": 200,
+      "batch_size": 8192,
+      "learning_rate": 0.001,
+      "lambda_w": 0.001,
+      "lambda_e": 0.001,
+      "lambda_cl": 0.005,
+      "cl_tau": 0.2,
+      "knn_k": 10,
+      "knn_chunk_size": 1024,
+      "knn_sim_threshold": 0.85,
+      "epoch_refresh_knn": 0,
+      "epoch_refresh_knn_auto": true,
+      "epoch_refresh_knn_auto_delay": true,
+      "epoch_refresh_knn_auto_delay_flag": 10,
+      "warmup_epochs": 0,
+      "n_layers": 2,
+      "macr_alpha": 0.5,
+      "macr_beta": 0.5,
+      "use_scheduler": false,
+      "implementation": "corrected",
+      "use_gpu": true,
+      "seed": 42,
+      "mask_weight": 0.1,
+      "cl_multi": true,
+      "cl_multi_next": true,
+      "lighter_perturb": false,
+      "edge_dropout_rate": 0.1,
+      "node_dropout_rate": 0.1,
+      "feature_dropout_rate": 0.2
+    },
+    "refresh_policy": "plateau",
+    "inference": [
+      "main",
+      "factual",
+      "counterfactual"
+    ],
+    "reference_grid": [
+      0.0,
+      0.5,
+      1.0,
+      2.0
+    ]
+  },
+  "Baby/baby_primary/DMCRec/woDebias": {
+    "dataset": "Baby",
+    "model": "DMCRec",
+    "variant": "woDebias",
+    "params": {
+      "name": "DMCRec_woDebias",
+      "k": 128,
+      "k2": 64,
+      "n_epochs": 200,
+      "batch_size": 8192,
+      "learning_rate": 0.001,
+      "lambda_w": 0.001,
+      "lambda_e": 0.001,
+      "lambda_cl": 0.005,
+      "cl_tau": 0.2,
+      "knn_k": 10,
+      "knn_chunk_size": 1024,
+      "knn_sim_threshold": 0.85,
+      "epoch_refresh_knn": 0,
+      "epoch_refresh_knn_auto": true,
+      "epoch_refresh_knn_auto_delay": true,
+      "epoch_refresh_knn_auto_delay_flag": 10,
+      "warmup_epochs": 0,
+      "n_layers": 2,
+      "macr_alpha": 0.5,
+      "macr_beta": 0.5,
+      "use_scheduler": false,
+      "implementation": "corrected",
+      "use_gpu": true,
+      "seed": 42,
+      "mask_weight": 0.1,
+      "cl_multi": true,
+      "cl_multi_next": true,
+      "lighter_perturb": false,
+      "edge_dropout_rate": 0.1,
+      "node_dropout_rate": 0.1,
+      "feature_dropout_rate": 0.2,
+      "use_debias": false
+    },
+    "refresh_policy": "plateau",
+    "inference": [
+      "main"
+    ],
+    "reference_grid": [
+      0.0
+    ]
+  },
+  "Baby/baby_baselines/WMF/full": {
+    "dataset": "Baby",
+    "model": "WMF",
+    "variant": "full",
+    "params": {
+      "k": 128,
+      "max_iter": 200,
+      "learning_rate": 0.001,
+      "seed": 42,
+      "batch_size": 128,
+      "lambda_u": 0.01,
+      "lambda_v": 0.01,
+      "a": 1.0,
+      "b": 0.01
+    },
+    "refresh_policy": "plateau",
+    "inference": [
+      "main"
+    ],
+    "reference_grid": [
+      0.0
+    ]
+  },
+  "Baby/baby_baselines/MENTOR/full": {
+    "dataset": "Baby",
+    "model": "MENTOR",
+    "variant": "full",
+    "params": {
+      "name": "MENTOR",
+      "n_epochs": 200,
+      "batch_size": 8192,
+      "embedding_size": 64,
+      "lr": 0.0001,
+      "dropout": 0.5,
+      "reg_weight": 0.001,
+      "mm_image_weight": 0.5,
+      "n_mm_layers": 1,
+      "device": "cuda",
+      "knn_k": 10,
+      "mask_weight_f": 1.5,
+      "mask_weight_g": 0.0001,
+      "align_weight": 0.1,
+      "temp": 0.2
+    },
+    "refresh_policy": "plateau",
+    "inference": [
+      "main"
+    ],
+    "reference_grid": [
+      0.0
+    ]
+  },
+  "Baby/baby_refresh_drift/DMCRec/full": {
+    "dataset": "Baby",
+    "model": "DMCRec",
+    "variant": "full",
+    "params": {
+      "name": "DMCRec_full",
+      "k": 128,
+      "k2": 64,
+      "n_epochs": 200,
+      "batch_size": 8192,
+      "learning_rate": 0.001,
+      "lambda_w": 0.001,
+      "lambda_e": 0.001,
+      "lambda_cl": 0.005,
+      "cl_tau": 0.2,
+      "knn_k": 10,
+      "knn_chunk_size": 1024,
+      "knn_sim_threshold": 0.85,
+      "epoch_refresh_knn": 0,
+      "epoch_refresh_knn_auto": true,
+      "epoch_refresh_knn_auto_delay": false,
+      "epoch_refresh_knn_auto_delay_flag": 10,
+      "warmup_epochs": 0,
+      "n_layers": 2,
+      "macr_alpha": 0.5,
+      "macr_beta": 0.5,
+      "use_scheduler": false,
+      "implementation": "corrected",
+      "use_gpu": true,
+      "seed": 42,
+      "mask_weight": 0.1,
+      "cl_multi": true,
+      "cl_multi_next": true,
+      "lighter_perturb": false,
+      "edge_dropout_rate": 0.1,
+      "node_dropout_rate": 0.1,
+      "feature_dropout_rate": 0.2
+    },
+    "refresh_policy": "drift",
+    "inference": [
+      "main"
+    ],
+    "reference_grid": [
+      0.0
+    ]
+  },
+  "Baby/baby_refresh_periodic/DMCRec/full": {
+    "dataset": "Baby",
+    "model": "DMCRec",
+    "variant": "full",
+    "params": {
+      "name": "DMCRec_full",
+      "k": 128,
+      "k2": 64,
+      "n_epochs": 200,
+      "batch_size": 8192,
+      "learning_rate": 0.001,
+      "lambda_w": 0.001,
+      "lambda_e": 0.001,
+      "lambda_cl": 0.005,
+      "cl_tau": 0.2,
+      "knn_k": 10,
+      "knn_chunk_size": 1024,
+      "knn_sim_threshold": 0.85,
+      "epoch_refresh_knn": 20,
+      "epoch_refresh_knn_auto": false,
+      "epoch_refresh_knn_auto_delay": false,
+      "epoch_refresh_knn_auto_delay_flag": 10,
+      "warmup_epochs": 0,
+      "n_layers": 2,
+      "macr_alpha": 0.5,
+      "macr_beta": 0.5,
+      "use_scheduler": false,
+      "implementation": "corrected",
+      "use_gpu": true,
+      "seed": 42,
+      "mask_weight": 0.1,
+      "cl_multi": true,
+      "cl_multi_next": true,
+      "lighter_perturb": false,
+      "edge_dropout_rate": 0.1,
+      "node_dropout_rate": 0.1,
+      "feature_dropout_rate": 0.2
+    },
+    "refresh_policy": "periodic",
+    "inference": [
+      "main"
+    ],
+    "reference_grid": [
+      0.0
+    ]
+  },
+  "Baby/baby_refresh_static/DMCRec/full": {
+    "dataset": "Baby",
+    "model": "DMCRec",
+    "variant": "full",
+    "params": {
+      "name": "DMCRec_full",
+      "k": 128,
+      "k2": 64,
+      "n_epochs": 200,
+      "batch_size": 8192,
+      "learning_rate": 0.001,
+      "lambda_w": 0.001,
+      "lambda_e": 0.001,
+      "lambda_cl": 0.005,
+      "cl_tau": 0.2,
+      "knn_k": 10,
+      "knn_chunk_size": 1024,
+      "knn_sim_threshold": 0.85,
+      "epoch_refresh_knn": 0,
+      "epoch_refresh_knn_auto": false,
+      "epoch_refresh_knn_auto_delay": false,
+      "epoch_refresh_knn_auto_delay_flag": 10,
+      "warmup_epochs": 0,
+      "n_layers": 2,
+      "macr_alpha": 0.5,
+      "macr_beta": 0.5,
+      "use_scheduler": false,
+      "implementation": "corrected",
+      "use_gpu": true,
+      "seed": 42,
+      "mask_weight": 0.1,
+      "cl_multi": true,
+      "cl_multi_next": true,
+      "lighter_perturb": false,
+      "edge_dropout_rate": 0.1,
+      "node_dropout_rate": 0.1,
+      "feature_dropout_rate": 0.2
+    },
+    "refresh_policy": "static",
+    "inference": [
+      "main"
+    ],
+    "reference_grid": [
+      0.0
+    ]
+  },
+  "Baby/baby_refresh_warmup/DMCRec/full": {
+    "dataset": "Baby",
+    "model": "DMCRec",
+    "variant": "full",
+    "params": {
+      "name": "DMCRec_full",
+      "k": 128,
+      "k2": 64,
+      "n_epochs": 200,
+      "batch_size": 8192,
+      "learning_rate": 0.001,
+      "lambda_w": 0.001,
+      "lambda_e": 0.001,
+      "lambda_cl": 0.005,
+      "cl_tau": 0.2,
+      "knn_k": 10,
+      "knn_chunk_size": 1024,
+      "knn_sim_threshold": 0.85,
+      "epoch_refresh_knn": 0,
+      "epoch_refresh_knn_auto": true,
+      "epoch_refresh_knn_auto_delay": false,
+      "epoch_refresh_knn_auto_delay_flag": 10,
+      "warmup_epochs": 10,
+      "n_layers": 2,
+      "macr_alpha": 0.5,
+      "macr_beta": 0.5,
+      "use_scheduler": false,
+      "implementation": "corrected",
+      "use_gpu": true,
+      "seed": 42,
+      "mask_weight": 0.1,
+      "cl_multi": true,
+      "cl_multi_next": true,
+      "lighter_perturb": false,
+      "edge_dropout_rate": 0.1,
+      "node_dropout_rate": 0.1,
+      "feature_dropout_rate": 0.2
+    },
+    "refresh_policy": "warmup",
+    "inference": [
+      "main"
+    ],
+    "reference_grid": [
+      0.0
+    ]
+  },
+  "Baby/baby_woCL/DMCRec/woCL": {
+    "dataset": "Baby",
+    "model": "DMCRec",
+    "variant": "woCL",
+    "params": {
+      "name": "DMCRec_woCL",
+      "k": 128,
+      "k2": 64,
+      "n_epochs": 200,
+      "batch_size": 8192,
+      "learning_rate": 0.001,
+      "lambda_w": 0.001,
+      "lambda_e": 0.001,
+      "lambda_cl": 0.0,
+      "cl_tau": 0.2,
+      "knn_k": 10,
+      "knn_chunk_size": 1024,
+      "knn_sim_threshold": 0.85,
+      "epoch_refresh_knn": 0,
+      "epoch_refresh_knn_auto": true,
+      "epoch_refresh_knn_auto_delay": true,
+      "epoch_refresh_knn_auto_delay_flag": 10,
+      "warmup_epochs": 0,
+      "n_layers": 2,
+      "macr_alpha": 0.5,
+      "macr_beta": 0.5,
+      "use_scheduler": false,
+      "implementation": "corrected",
+      "use_gpu": true,
+      "seed": 42,
+      "mask_weight": 0.1,
+      "cl_multi": true,
+      "cl_multi_next": true,
+      "lighter_perturb": false,
+      "edge_dropout_rate": 0.1,
+      "node_dropout_rate": 0.1,
+      "feature_dropout_rate": 0.2
+    },
+    "refresh_policy": "plateau",
+    "inference": [
+      "main"
+    ],
+    "reference_grid": [
+      0.0
+    ]
+  },
+  "Baby/baby_woGCN/DMCRec/woGCN": {
+    "dataset": "Baby",
+    "model": "DMCRec",
+    "variant": "woGCN",
+    "params": {
+      "name": "DMCRec_woGCN",
+      "k": 128,
+      "k2": 64,
+      "n_epochs": 200,
+      "batch_size": 8192,
+      "learning_rate": 0.001,
+      "lambda_w": 0.001,
+      "lambda_e": 0.001,
+      "lambda_cl": 0.005,
+      "cl_tau": 0.2,
+      "knn_k": 10,
+      "knn_chunk_size": 1024,
+      "knn_sim_threshold": 0.85,
+      "epoch_refresh_knn": 0,
+      "epoch_refresh_knn_auto": true,
+      "epoch_refresh_knn_auto_delay": true,
+      "epoch_refresh_knn_auto_delay_flag": 10,
+      "warmup_epochs": 0,
+      "n_layers": 2,
+      "macr_alpha": 0.5,
+      "macr_beta": 0.5,
+      "use_scheduler": false,
+      "implementation": "corrected",
+      "use_gpu": true,
+      "seed": 42,
+      "mask_weight": 0.1,
+      "cl_multi": true,
+      "cl_multi_next": true,
+      "lighter_perturb": false,
+      "edge_dropout_rate": 0.1,
+      "node_dropout_rate": 0.1,
+      "feature_dropout_rate": 0.2,
+      "use_gcn": false
+    },
+    "refresh_policy": "plateau",
+    "inference": [
+      "main"
+    ],
+    "reference_grid": [
+      0.0
+    ]
+  },
+  "Baby/baby_woKNN/DMCRec/woKNN": {
+    "dataset": "Baby",
+    "model": "DMCRec",
+    "variant": "woKNN",
+    "params": {
+      "name": "DMCRec_woKNN",
+      "k": 128,
+      "k2": 64,
+      "n_epochs": 200,
+      "batch_size": 8192,
+      "learning_rate": 0.001,
+      "lambda_w": 0.001,
+      "lambda_e": 0.001,
+      "lambda_cl": 0.005,
+      "cl_tau": 0.2,
+      "knn_k": 10,
+      "knn_chunk_size": 1024,
+      "knn_sim_threshold": 0.85,
+      "epoch_refresh_knn": 0,
+      "epoch_refresh_knn_auto": true,
+      "epoch_refresh_knn_auto_delay": true,
+      "epoch_refresh_knn_auto_delay_flag": 10,
+      "warmup_epochs": 0,
+      "n_layers": 2,
+      "macr_alpha": 0.5,
+      "macr_beta": 0.5,
+      "use_scheduler": false,
+      "implementation": "corrected",
+      "use_gpu": true,
+      "seed": 42,
+      "mask_weight": 0.1,
+      "cl_multi": true,
+      "cl_multi_next": true,
+      "lighter_perturb": false,
+      "edge_dropout_rate": 0.1,
+      "node_dropout_rate": 0.1,
+      "feature_dropout_rate": 0.2,
+      "use_knn_graph": false
+    },
+    "refresh_policy": "plateau",
+    "inference": [
+      "main"
+    ],
+    "reference_grid": [
+      0.0
+    ]
+  },
+  "Baby/baby_woMACR-A/DMCRec/woMACR-A": {
+    "dataset": "Baby",
+    "model": "DMCRec",
+    "variant": "woMACR-A",
+    "params": {
+      "name": "DMCRec_woMACR-A",
+      "k": 128,
+      "k2": 64,
+      "n_epochs": 200,
+      "batch_size": 8192,
+      "learning_rate": 0.001,
+      "lambda_w": 0.001,
+      "lambda_e": 0.001,
+      "lambda_cl": 0.005,
+      "cl_tau": 0.2,
+      "knn_k": 10,
+      "knn_chunk_size": 1024,
+      "knn_sim_threshold": 0.85,
+      "epoch_refresh_knn": 0,
+      "epoch_refresh_knn_auto": true,
+      "epoch_refresh_knn_auto_delay": true,
+      "epoch_refresh_knn_auto_delay_flag": 10,
+      "warmup_epochs": 0,
+      "n_layers": 2,
+      "macr_alpha": 0.0,
+      "macr_beta": 0.5,
+      "use_scheduler": false,
+      "implementation": "corrected",
+      "use_gpu": true,
+      "seed": 42,
+      "mask_weight": 0.1,
+      "cl_multi": true,
+      "cl_multi_next": true,
+      "lighter_perturb": false,
+      "edge_dropout_rate": 0.1,
+      "node_dropout_rate": 0.1,
+      "feature_dropout_rate": 0.2
+    },
+    "refresh_policy": "plateau",
+    "inference": [
+      "main"
+    ],
+    "reference_grid": [
+      0.0
+    ]
+  },
+  "Baby/baby_woMACR-B/DMCRec/woMACR-B": {
+    "dataset": "Baby",
+    "model": "DMCRec",
+    "variant": "woMACR-B",
+    "params": {
+      "name": "DMCRec_woMACR-B",
+      "k": 128,
+      "k2": 64,
+      "n_epochs": 200,
+      "batch_size": 8192,
+      "learning_rate": 0.001,
+      "lambda_w": 0.001,
+      "lambda_e": 0.001,
+      "lambda_cl": 0.005,
+      "cl_tau": 0.2,
+      "knn_k": 10,
+      "knn_chunk_size": 1024,
+      "knn_sim_threshold": 0.85,
+      "epoch_refresh_knn": 0,
+      "epoch_refresh_knn_auto": true,
+      "epoch_refresh_knn_auto_delay": true,
+      "epoch_refresh_knn_auto_delay_flag": 10,
+      "warmup_epochs": 0,
+      "n_layers": 2,
+      "macr_alpha": 0.5,
+      "macr_beta": 0.0,
+      "use_scheduler": false,
+      "implementation": "corrected",
+      "use_gpu": true,
+      "seed": 42,
+      "mask_weight": 0.1,
+      "cl_multi": true,
+      "cl_multi_next": true,
+      "lighter_perturb": false,
+      "edge_dropout_rate": 0.1,
+      "node_dropout_rate": 0.1,
+      "feature_dropout_rate": 0.2
+    },
+    "refresh_policy": "plateau",
+    "inference": [
+      "main"
+    ],
+    "reference_grid": [
+      0.0
+    ]
+  },
+  "Baby/baby_woMask/DMCRec/woMask": {
+    "dataset": "Baby",
+    "model": "DMCRec",
+    "variant": "woMask",
+    "params": {
+      "name": "DMCRec_woMask",
+      "k": 128,
+      "k2": 64,
+      "n_epochs": 200,
+      "batch_size": 8192,
+      "learning_rate": 0.001,
+      "lambda_w": 0.001,
+      "lambda_e": 0.001,
+      "lambda_cl": 0.005,
+      "cl_tau": 0.2,
+      "knn_k": 10,
+      "knn_chunk_size": 1024,
+      "knn_sim_threshold": 0.85,
+      "epoch_refresh_knn": 0,
+      "epoch_refresh_knn_auto": true,
+      "epoch_refresh_knn_auto_delay": true,
+      "epoch_refresh_knn_auto_delay_flag": 10,
+      "warmup_epochs": 0,
+      "n_layers": 2,
+      "macr_alpha": 0.5,
+      "macr_beta": 0.5,
+      "use_scheduler": false,
+      "implementation": "corrected",
+      "use_gpu": true,
+      "seed": 42,
+      "mask_weight": 0.0,
+      "cl_multi": true,
+      "cl_multi_next": true,
+      "lighter_perturb": false,
+      "edge_dropout_rate": 0.1,
+      "node_dropout_rate": 0.1,
+      "feature_dropout_rate": 0.2
+    },
+    "refresh_policy": "plateau",
+    "inference": [
+      "main"
+    ],
+    "reference_grid": [
+      0.0
+    ]
+  },
+  "Baby/baby_woText/DMCRec/woText": {
+    "dataset": "Baby",
+    "model": "DMCRec",
+    "variant": "woText",
+    "params": {
+      "name": "DMCRec_woText",
+      "k": 128,
+      "k2": 64,
+      "n_epochs": 200,
+      "batch_size": 8192,
+      "learning_rate": 0.001,
+      "lambda_w": 0.001,
+      "lambda_e": 0.001,
+      "lambda_cl": 0.005,
+      "cl_tau": 0.2,
+      "knn_k": 10,
+      "knn_chunk_size": 1024,
+      "knn_sim_threshold": 0.85,
+      "epoch_refresh_knn": 0,
+      "epoch_refresh_knn_auto": true,
+      "epoch_refresh_knn_auto_delay": true,
+      "epoch_refresh_knn_auto_delay_flag": 10,
+      "warmup_epochs": 0,
+      "n_layers": 2,
+      "macr_alpha": 0.5,
+      "macr_beta": 0.5,
+      "use_scheduler": false,
+      "implementation": "corrected",
+      "use_gpu": true,
+      "seed": 42,
+      "mask_weight": 0.1,
+      "cl_multi": true,
+      "cl_multi_next": true,
+      "lighter_perturb": false,
+      "edge_dropout_rate": 0.1,
+      "node_dropout_rate": 0.1,
+      "feature_dropout_rate": 0.2,
+      "use_text": false
+    },
+    "refresh_policy": "plateau",
+    "inference": [
+      "main"
+    ],
+    "reference_grid": [
+      0.0
+    ]
+  },
+  "Sports/sports_primary/DMCRec/full": {
+    "dataset": "Sports",
+    "model": "DMCRec",
+    "variant": "full",
+    "params": {
+      "name": "DMCRec_full",
+      "k": 128,
+      "k2": 64,
+      "n_epochs": 200,
+      "batch_size": 8192,
+      "learning_rate": 0.001,
+      "lambda_w": 0.001,
+      "lambda_e": 0.001,
+      "lambda_cl": 0.01,
+      "cl_tau": 0.2,
+      "knn_k": 10,
+      "knn_chunk_size": 1024,
+      "knn_sim_threshold": 0.85,
+      "epoch_refresh_knn": 0,
+      "epoch_refresh_knn_auto": true,
+      "epoch_refresh_knn_auto_delay": true,
+      "epoch_refresh_knn_auto_delay_flag": 10,
+      "warmup_epochs": 0,
+      "n_layers": 2,
+      "macr_alpha": 0.5,
+      "macr_beta": 0.5,
+      "use_scheduler": false,
+      "implementation": "corrected",
+      "use_gpu": true,
+      "seed": 42,
+      "mask_weight": 0.1,
+      "cl_multi": true,
+      "cl_multi_next": true,
+      "lighter_perturb": false,
+      "edge_dropout_rate": 0.1,
+      "node_dropout_rate": 0.1,
+      "feature_dropout_rate": 0.2
+    },
+    "refresh_policy": "plateau",
+    "inference": [
+      "main"
+    ],
+    "reference_grid": [
+      0.0
+    ]
+  },
+  "Sports/sports_primary/DMCRec/woDebias": {
+    "dataset": "Sports",
+    "model": "DMCRec",
+    "variant": "woDebias",
+    "params": {
+      "name": "DMCRec_woDebias",
+      "k": 128,
+      "k2": 64,
+      "n_epochs": 200,
+      "batch_size": 8192,
+      "learning_rate": 0.001,
+      "lambda_w": 0.001,
+      "lambda_e": 0.001,
+      "lambda_cl": 0.01,
+      "cl_tau": 0.2,
+      "knn_k": 10,
+      "knn_chunk_size": 1024,
+      "knn_sim_threshold": 0.85,
+      "epoch_refresh_knn": 0,
+      "epoch_refresh_knn_auto": true,
+      "epoch_refresh_knn_auto_delay": true,
+      "epoch_refresh_knn_auto_delay_flag": 10,
+      "warmup_epochs": 0,
+      "n_layers": 2,
+      "macr_alpha": 0.5,
+      "macr_beta": 0.5,
+      "use_scheduler": false,
+      "implementation": "corrected",
+      "use_gpu": true,
+      "seed": 42,
+      "mask_weight": 0.1,
+      "cl_multi": true,
+      "cl_multi_next": true,
+      "lighter_perturb": false,
+      "edge_dropout_rate": 0.1,
+      "node_dropout_rate": 0.1,
+      "feature_dropout_rate": 0.2,
+      "use_debias": false
+    },
+    "refresh_policy": "plateau",
+    "inference": [
+      "main"
+    ],
+    "reference_grid": [
+      0.0
+    ]
+  },
+  "Sports/sports_primary/MENTOR/full": {
+    "dataset": "Sports",
+    "model": "MENTOR",
+    "variant": "full",
+    "params": {
+      "name": "MENTOR",
+      "n_epochs": 200,
+      "batch_size": 8192,
+      "embedding_size": 64,
+      "lr": 0.0001,
+      "dropout": 0.5,
+      "reg_weight": 0.001,
+      "mm_image_weight": 0.5,
+      "n_mm_layers": 1,
+      "device": "cuda",
+      "knn_k": 10,
+      "mask_weight_f": 1.5,
+      "mask_weight_g": 0.0001,
+      "align_weight": 0.1,
+      "temp": 0.2
+    },
+    "refresh_policy": "plateau",
+    "inference": [
+      "main"
+    ],
+    "reference_grid": [
+      0.0
+    ]
+  },
+  "Sports/sports_primary/WMF/full": {
+    "dataset": "Sports",
+    "model": "WMF",
+    "variant": "full",
+    "params": {
+      "k": 128,
+      "max_iter": 200,
+      "learning_rate": 0.001,
+      "seed": 42,
+      "batch_size": 128,
+      "lambda_u": 0.01,
+      "lambda_v": 0.01,
+      "a": 1.0,
+      "b": 0.01
+    },
+    "refresh_policy": "plateau",
+    "inference": [
+      "main"
+    ],
+    "reference_grid": [
+      0.0
+    ]
+  },
+  "Baby/MACR-MF": {
+    "dataset": "Baby",
+    "model": "MACR-MF",
+    "variant": "full",
+    "selected": {
+      "learning_rate": 0.0001,
+      "reference": 0.0,
+      "validation_ndcg20": 0.018521500093090344
+    },
+    "parameters": {
+      "dim": 64,
+      "epochs": 200,
+      "batch_size": 8192,
+      "alpha": 0.001,
+      "beta": 0.001,
+      "regularization": 1e-05,
+      "sampler": "user_uniform"
+    }
+  },
+  "Baby/MF-BCE": {
+    "dataset": "Baby",
+    "model": "MF-BCE",
+    "variant": "full",
+    "selected": {
+      "learning_rate": 0.001,
+      "reference": 0.0,
+      "validation_ndcg20": 0.01519590504939601
+    },
+    "parameters": {
+      "dim": 64,
+      "epochs": 200,
+      "batch_size": 8192,
+      "alpha": 0.001,
+      "beta": 0.001,
+      "regularization": 1e-05,
+      "sampler": "user_uniform"
+    }
+  },
+  "Sports/MACR-MF": {
+    "dataset": "Sports",
+    "model": "MACR-MF",
+    "variant": "full",
+    "selected": {
+      "learning_rate": 0.001,
+      "reference": 1.0,
+      "validation_ndcg20": 0.019978117830707017
+    },
+    "parameters": {
+      "dim": 64,
+      "epochs": 200,
+      "batch_size": 8192,
+      "alpha": 0.001,
+      "beta": 0.001,
+      "regularization": 1e-05,
+      "sampler": "user_uniform"
+    }
+  },
+  "Sports/MF-BCE": {
+    "dataset": "Sports",
+    "model": "MF-BCE",
+    "variant": "full",
+    "selected": {
+      "learning_rate": 0.001,
+      "reference": 0.0,
+      "validation_ndcg20": 0.01786503055986661
+    },
+    "parameters": {
+      "dim": 64,
+      "epochs": 200,
+      "batch_size": 8192,
+      "alpha": 0.001,
+      "beta": 0.001,
+      "regularization": 1e-05,
+      "sampler": "user_uniform"
+    }
+  }
+}

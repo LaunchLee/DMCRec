@@ -1,0 +1,15 @@
+# Python 3.11. Install a driver-compatible PyTorch separately first.
+# Based on local tested versions; pandas 3.0.5 replaces yanked 3.0.4.
+# Validated on the remote CUDA server, including both PyTorch and TensorFlow.
+cornac==2.5.0
+numpy==2.4.6
+scipy==1.17.1
+pandas==3.0.5
+joblib==1.5.3
+optuna==4.9.0
+torch-geometric==2.8.0
+tqdm==4.68.3
+pillow==12.2.0
+scikit-learn==1.9.0
+matplotlib==3.11.0
+tensorflow==2.21.0

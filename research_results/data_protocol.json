@@ -1,0 +1,118 @@
+{
+  "Baby": {
+    "protocol": "corrected",
+    "split_seed": 42,
+    "fingerprint": "9fd842275fb13524aece390637e767ff8ce5f38090f159e317c7178530ae26ff",
+    "before": {
+      "interactions": 160792,
+      "users": 19445,
+      "items": 7050,
+      "gini": 0.5488468781658451,
+      "sparsity": 0.9988270827520429,
+      "max_item_degree": 780
+    },
+    "train_before_filter": {
+      "interactions": 112553,
+      "users": 19422,
+      "items": 7048,
+      "gini": 0.5559433543897436,
+      "sparsity": 0.9991777625943689,
+      "max_item_degree": 568
+    },
+    "train_after_filter": {
+      "interactions": 112553,
+      "users": 19422,
+      "items": 7048,
+      "gini": 0.5559433543897436,
+      "sparsity": 0.9991777625943689,
+      "max_item_degree": 568
+    },
+    "validation_raw": 16080,
+    "test_raw": 32159,
+    "validation_known": 16043,
+    "test_known": 32062,
+    "filter_scope": "training_only",
+    "exclude_unknowns": true,
+    "split_source": "random",
+    "feedback": "binary",
+    "source_metadata": {
+      "split_source": "random",
+      "source_label_counts": {
+        "0": 118551,
+        "1": 20559,
+        "2": 21682
+      },
+      "source_rating_counts": {
+        "5.0": 93526,
+        "4.0": 32999,
+        "2.0": 9193,
+        "3.0": 17255,
+        "1.0": 7819
+      },
+      "feedback": "binary",
+      "item_identity": "source_mapping",
+      "user_identity": "source_mapping"
+    },
+    "feature_matched_interactions": 160792,
+    "source_interactions": 160792,
+    "features_sha256": "407784468349679474bba51b8b8f3e79a193ad303ab12e0a620caf5a84722b3e"
+  },
+  "Sports": {
+    "protocol": "corrected",
+    "split_seed": 42,
+    "fingerprint": "739751e70e931e56617c6d20c229c539ffcb42a32fdda94205a1faeb454e4bd5",
+    "before": {
+      "interactions": 296337,
+      "users": 35598,
+      "items": 18357,
+      "gini": 0.4896765115357715,
+      "sparsity": 0.9995465195454304,
+      "max_item_degree": 1042
+    },
+    "train_before_filter": {
+      "interactions": 207435,
+      "users": 35559,
+      "items": 18350,
+      "gini": 0.5026746331817675,
+      "sparsity": 0.999682095681177,
+      "max_item_degree": 721
+    },
+    "train_after_filter": {
+      "interactions": 207435,
+      "users": 35559,
+      "items": 18350,
+      "gini": 0.5026746331817675,
+      "sparsity": 0.999682095681177,
+      "max_item_degree": 721
+    },
+    "validation_raw": 29634,
+    "test_raw": 59268,
+    "validation_known": 29573,
+    "test_known": 59086,
+    "filter_scope": "training_only",
+    "exclude_unknowns": true,
+    "split_source": "random",
+    "feedback": "binary",
+    "source_metadata": {
+      "split_source": "random",
+      "source_label_counts": {
+        "0": 218409,
+        "1": 37899,
+        "2": 40029
+      },
+      "source_rating_counts": {
+        "2.0": 10204,
+        "5.0": 188208,
+        "3.0": 24071,
+        "4.0": 64809,
+        "1.0": 9045
+      },
+      "feedback": "binary",
+      "item_identity": "source_mapping",
+      "user_identity": "source_mapping"
+    },
+    "feature_matched_interactions": 296337,
+    "source_interactions": 296337,
+    "features_sha256": "4efe514d8013621e2b6ac3f4f2f73d0368c79ef02af763fc780199d1e7ca1146"
+  }
+}

@@ -1,0 +1,23 @@
+# Local environments and Python/Jupyter caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Original data and features; retain the dataset instructions
+/datasets/*
+!/datasets/readme.md
+/experiments/dmcrec/datasets/
+cache/
+*.npy
+*.npz
+*.joblib
+*.pkl
+*.pt
+*.pth
+
+# New experiment output (archived aggregate research_results remain versioned)
+/replication_results/
+/dmcrec_results/
+*.log

@@ -1,34 +1,4 @@
-# Regarding the current code files, this requirements.txt contains redundant pip dependencies.
-
-# cuda 12.6
-# uv venv --python 3.11
-# uv pip install -r requirements.txt [--torch-backend=cu126]
-ipykernel
-jupyter
-notebook
-nbconvert
-graphviz
-matplotlib
-pandas
-scikit-learn
-numpy>=1.26.0
-seaborn
-joblib
-optuna
-plotly
-kaleido==0.2.1
-
-pip3-autoremove
-
-torch>=2.4.0
-torchaudio>=2.4.0
-torchvision>=0.19.0
-torch_geometric
-
-tensorflow>=2.16.1
-
-cornac
-transformers>=4.40.0
-sentence_transformers
-
-openai
+# Recorded Python 3.11 experiment dependencies.
+# Install driver/runtime-compatible PyTorch separately before these packages.
+# Inspect compatibility before installing into a different Colab runtime.
+-r experiments/dmcrec/requirements-remote.txt
